@@ -6,7 +6,7 @@ http://www.uvek-gis.admin.ch/BFE/ogd/52/Solarenergiepotenziale_Gemeinden_Daecher
 ### Marche à suivre #
 1. Créer un fichier preparer.js
 2. Charger les données  
-`const data = require('./Solarenergiepotenziale_Gemeinden_Daecher_und_Fassaden.json')`
+`const data = require('./cantons.json')`
 3. Créer une constante qui determinera les données à récupérer qui nous intéresse  
 `const cantonZurich = d => d.Canton === "Zürich" && d.Scenario1_RoofsOnly_PotentialSolarElectricity_GWh < '40'`
 4. Créer un filtre qui affiche que les données qui nous intéressent, selon la commune    
