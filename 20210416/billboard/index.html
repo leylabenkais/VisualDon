@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/billboard.js@3.0.2/dist/billboard.min.css" />
+    <script src="https://unpkg.com/billboard.js@3.0.2/dist/billboard.pkgd.min.js"></script>
+</head>
+
+<body>
+    <div id="graph"></div>
+    <script>
+        const data = [{ "nom": "Lausanne", "voyageurs": 89200 }, { "nom": "Vevey", "voyageurs": 21000 }, { "nom": "Renens VD", "voyageurs": 18300 }, { "nom": "Morges", "voyageurs": 17000 }, { "nom": "Yverdon-les-Bains", "voyageurs": 16800 }, { "nom": "Nyon", "voyageurs": 15900 }, { "nom": "Montreux", "voyageurs": 15800 }]
+
+        bb.generate({
+            bindto: "#graph",
+            data: {
+                json: {
+                    nom: data.map(({ nom }) => nom),
+                },
+                type: 'bar',
+            },
+            axis: {
+                x: {
+                    type: 'category',
+                    categories: data.map(({ voyageurs }) => voyageurs),
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
